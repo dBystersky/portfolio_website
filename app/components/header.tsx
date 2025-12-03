@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function WebsiteHeader() {
     return (
@@ -11,10 +12,10 @@ export default function WebsiteHeader() {
 
             { /* Centre */}
             <nav className="hidden md:flex gap-6 justify-between items-center text-black font-medium">
-                <a href="#" className="hover:text-gray-600 hover:outline transition">Home</a>
-                <a href="#" className="hover:text-gray-600 hover:outline transition">About Me</a>
-                <a href="#" className="hover:text-gray-600 hover:outline transition">Portfolio</a>
-                <a href="#" className="hover:text-gray-600 hover:outline transition">Contact</a>
+                <Link href="/" className="hover:text-gray-600 hover:outline transition">Home</Link>
+                <Link href="/about" className="hover:text-gray-600 hover:outline transition">About Me</Link>
+                <Link href="/portfolio" className="hover:text-gray-600 hover:outline transition">Portfolio</Link>
+                <Link href="/contact" className="hover:text-gray-600 hover:outline transition">Contact</Link>
             </nav>
 
         </header>

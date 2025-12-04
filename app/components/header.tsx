@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function WebsiteHeader() {
     return (
-        <header className="w-full px-8 py-4 bg-white shadow-md">
+        <header className="w-full px-8 py-4 bg-white shadow-md sticky top-0 z-50 ">
 
             { /* Left */}
             <div className="flex items-center gap-3">

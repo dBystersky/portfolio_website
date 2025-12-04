@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function WebsiteFooter() {
     return (
-        <footer className="w-full px-8 py-3 bg-white shadow-md mt-16">
+        <footer className="w-full px-8 py-3 bg-white shadow-md">
             <div className="flex flex-col items-center gap-4">
                 <div className="flex gap-6">
                     <a

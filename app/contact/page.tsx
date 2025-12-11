@@ -119,6 +119,19 @@ export default function ContactPage() {
                 />
             </div>
 
+            {status.message && (
+                <div
+                  className={`p-4 rounded-lg ${
+                    status.type === 'success'
+                      ? 'bg-green-50 text-green-800 border border-green-200'
+                      : 'bg-red-50 text-red-800 border border-red-200'
+                  }`}
+                >
+                  {status.message}
+                </div>
+              )
+            }
+
             <button
               onClick={handleSubmit}
               disabled={isSubmitting}

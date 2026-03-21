@@ -24,13 +24,15 @@ export default function AboutPage() {
           </div>
 
           <div className="grid gap-8 lg:grid-cols-[280px_1fr] lg:items-start mb-10">
-            {/* Portrait: add e.g. /public/portrait.jpg and next/image */}
-            <div
-              className={`${cardClass} flex aspect-square max-w-xs mx-auto lg:mx-0 w-full items-center justify-center p-6 text-center`}
-            >
-              <div className="flex flex-col items-center gap-3 text-gray-400">
-                <ImageIcon className="w-10 h-10" aria-hidden />
-                <p className="text-sm">Portrait placeholder</p>
+            {/* Portrait: sticky while "My story" scrolls (lg+). top-24 clears sticky header. */}
+            <div className="max-w-xs mx-auto w-full lg:mx-0 lg:max-w-none lg:self-start lg:sticky lg:top-24 lg:z-10">
+              <div
+                className={`${cardClass} flex aspect-square w-full items-center justify-center p-6 text-center`}
+              >
+                <div className="flex flex-col items-center gap-3 text-gray-400">
+                  <ImageIcon className="w-10 h-10" aria-hidden />
+                  <p className="text-sm">Portrait placeholder</p>
+                </div>
               </div>
             </div>
 

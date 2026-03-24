@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ImageIcon, LayoutGrid, Sparkles } from "lucide-react";
+import { ArrowRight, ImageIcon, LayoutGrid, Mail, Sparkles, User } from "lucide-react";
 
 import WebsiteHeader from "./components/header";
 import WebsiteFooter from "./components/footer";
@@ -87,33 +87,43 @@ export default function Home() {
             </div>
           </section>
 
-          <div className={`${cardClass} p-8`}>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Explore</h2>
-            <p className="text-gray-700 mb-6">
-              {/* Optional CTA copy */}
-              [Short line inviting people to see your work or get in touch.]
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/portfolio"
-                className="inline-flex items-center gap-2 rounded-lg bg-gray-200 text-gray-800 px-5 py-2.5 font-medium hover:bg-gray-300 transition"
-              >
-                View portfolio
+          <div className="grid gap-6 md:grid-cols-2">
+            <Link
+              href="/about"
+              className={`${cardClass} p-8 flex flex-col h-full hover:shadow-xl transition-shadow group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`}
+            >
+              <div className="flex items-center gap-2 text-indigo-700 font-medium mb-3">
+                <User className="w-5 h-5 shrink-0" aria-hidden />
+                <span>About me</span>
+              </div>
+              <h2 className="text-xl font-semibold text-gray-900 mb-3">Background & story</h2>
+              <p className="text-gray-700 leading-relaxed flex-1 mb-6">
+                {/* Optional teaser — replace with your copy */}
+                [Short line on what visitors will learn on your about page.]
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm font-medium text-indigo-700 group-hover:text-indigo-900 transition">
+                Go to about
                 <ArrowRight className="w-4 h-4" aria-hidden />
-              </Link>
-              <Link
-                href="/about"
-                className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-2.5 font-medium text-gray-800 hover:bg-gray-50 transition"
-              >
-                About me
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-2.5 font-medium text-gray-800 hover:bg-gray-50 transition"
-              >
-                Contact
-              </Link>
-            </div>
+              </span>
+            </Link>
+
+            <Link
+              href="/contact"
+              className={`${cardClass} p-8 flex flex-col h-full hover:shadow-xl transition-shadow group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500`}
+            >
+              <div className="flex items-center gap-2 text-indigo-700 font-medium mb-3">
+                <Mail className="w-5 h-5 shrink-0" aria-hidden />
+                <span>Contact</span>
+              </div>
+              <h2 className="text-xl font-semibold text-gray-900 mb-3">Get in touch</h2>
+              <p className="text-gray-700 leading-relaxed flex-1 mb-6">
+                [Short line inviting questions, collaborations, or opportunities.]
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm font-medium text-indigo-700 group-hover:text-indigo-900 transition">
+                Go to contact
+                <ArrowRight className="w-4 h-4" aria-hidden />
+              </span>
+            </Link>
           </div>
         </div>
       </div>

@@ -7,28 +7,28 @@ export type PortfolioProject = {
 
 export const portfolioProjects: PortfolioProject[] = [
   {
-    title: "[Project title]",
+    title: "gitgauge",
     description:
-      "[2–3 lines: problem, your role, tech stack, or outcome. Replace this text.]",
-    href: "#",
-    tag: "[Category]",
+      "In a team, developed an educational tool to analyse Git repositories, specifically the contributions by contributors and to then determine an appropriate “scale” for a student’s grade. Stack: Tauri 2.0 Framework; Rust (Backend); Svelte/SvelteKit (Frontend); GitHub Actions (DevOps)",
+    href: "https://monash-fit3170.github.io/2025W1-Commitment/",
+    tag: "Team project",
   },
   {
     title: "[Project title]",
     description: "[Short description for this tile.]",
     href: "#",
-    tag: "[Category]",
+    tag: "Web app",
   },
   {
     title: "[Project title]",
     description: "[Short description for this tile.]",
     href: "#",
-    tag: "[Category]",
+    tag: "UI/UX concept",
   },
   {
     title: "[Project title]",
     description: "[Short description for this tile.]",
     href: "#",
-    tag: "[Category]",
+    tag: "Data visualization",
   },
 ];

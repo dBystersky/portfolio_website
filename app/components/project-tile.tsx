@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ExternalLink, ImageIcon } from "lucide-react";
 
 import type { PortfolioProject } from "../data/projects";
@@ -24,10 +25,20 @@ export function ProjectTile({ project, compact }: Props) {
           isCompact ? "aspect-[16/10]" : "aspect-video"
         }`}
       >
-        <div className="flex flex-col items-center gap-2 text-gray-400">
-          <ImageIcon className={isCompact ? "w-8 h-8" : "w-10 h-10"} aria-hidden />
-          <span className="text-xs">Project image</span>
-        </div>
+        {project.imageSrc ? (
+          <Image
+            src={project.imageSrc}
+            alt={project.imageAlt ?? `${project.title} project image`}
+            fill
+            sizes={isCompact ? "(max-width: 1024px) 50vw, 33vw" : "(max-width: 1024px) 100vw, 33vw"}
+            className="object-cover"
+          />
+        ) : (
+          <div className="flex flex-col items-center gap-2 text-gray-400">
+            <ImageIcon className={isCompact ? "w-8 h-8" : "w-10 h-10"} aria-hidden />
+            <span className="text-xs">Project image</span>
+          </div>
+        )}
         {project.tag ? (
           <span className="absolute top-2 left-2 rounded-md bg-white/90 px-2 py-0.5 text-xs font-medium text-gray-700 border border-gray-200 shadow-sm">
             {project.tag}

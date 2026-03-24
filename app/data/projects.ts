@@ -11,7 +11,7 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     title: "gitgauge",
     description:
-      "In a team, developed an educational tool to analyse Git repositories, specifically the contributions by contributors and to then determine an appropriate “scale” for a student’s grade. Stack: Tauri 2.0 Framework; Rust (Backend); Svelte/SvelteKit (Frontend); GitHub Actions (DevOps)",
+      "A team-built educational analytics tool that examines Git repositories to evaluate contributor activity and support grading decisions. Built with Tauri 2.0, Rust, Svelte/SvelteKit, and GitHub Actions.",
     href: "https://monash-fit3170.github.io/2025W1-Commitment/",
     tag: "Web app",
     imageSrc: "/gitgauge.png",

@@ -69,7 +69,7 @@ export default function Home() {
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900">Recent projects</h2>
                 <p className="text-gray-600 text-sm mt-1 max-w-xl">
-                  A few highlights — see the full list on the portfolio page.
+                  A few highlights! See the full list on the portfolio page.
                 </p>
               </div>
               <Link

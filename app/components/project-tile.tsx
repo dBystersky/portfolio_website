@@ -74,15 +74,9 @@ export function ProjectTile({ project, compact }: Props) {
           </Link>
         ) : (
           <span
-            className={`inline-flex items-center gap-2 text-gray-400 ${
-              isCompact ? "text-xs" : "text-sm"
-            }`}
+            className={`text-gray-400 ${isCompact ? "text-xs" : "text-sm"}`}
           >
-            [Add link URL in projects array]
-            <ExternalLink
-              className={`opacity-50 ${isCompact ? "w-3.5 h-3.5" : "w-4 h-4"}`}
-              aria-hidden
-            />
+            Private repository
           </span>
         )}
       </div>

@@ -13,7 +13,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "A team-built educational analytics tool that examines Git repositories to evaluate contributor activity and support grading decisions. Built with Tauri 2.0, Rust, Svelte/SvelteKit, and GitHub Actions.",
     href: "https://monash-fit3170.github.io/2025W1-Commitment/",
-    tag: "Web app",
+    tag: "Application",
     imageSrc: "/gitgauge.png",
     imageAlt: "gitgauge project preview",
   },
@@ -25,6 +25,20 @@ export const portfolioProjects: PortfolioProject[] = [
     tag: "Website",
     imageSrc: "/github.svg",
     imageAlt: "Portfolio website repository preview",
+  },
+  {
+    title: "Santorini Board Game Simulator",
+    description: "[Short description for this tile.]",
+    href: "#",
+    tag: "Application",
+    imageSrc: "/santorini.png",
+    imageAlt: "Santorini board game simulator project preview",
+  },
+  {
+    title: "[Project title]",
+    description: "[Short description for this tile.]",
+    href: "#",
+    tag: "Placeholder",
   },
   {
     title: "[Project title]",

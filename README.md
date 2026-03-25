@@ -1,4 +1,4 @@
-# Darcy Bystersky Portfolio Website
+# My Portfolio Website
 
 A personal portfolio site built to present work clearly and make it easy for visitors to learn more and get in touch. This repo uses **Next.js (App Router)** and **Tailwind CSS** with a component-driven layout and a data-driven projects section.
 

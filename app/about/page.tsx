@@ -93,17 +93,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Optional full-width image strip — swap for next/image when ready */}
-          <div
-            className={`${cardClass} mt-8 flex min-h-[200px] items-center justify-center p-8 text-center`}
-          >
-            <div className="flex flex-col items-center gap-3 text-gray-400">
-              <ImageIcon className="w-10 h-10" aria-hidden />
-              <p className="text-sm">
-                Wide image placeholder — workspace, banner, or extra photo
-              </p>
-            </div>
-          </div>
+          
         </div>
       </div>
 

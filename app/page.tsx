@@ -32,7 +32,7 @@ export default function Home() {
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center mb-10">
             {/* Hero image: put a file in public/ (e.g. public/hero.jpg) and use next/image here */}
             <div
-              className={`${cardClass} flex aspect-[4/3] items-center justify-center p-6 text-center`}
+              className={`${cardClass} flex aspect-[4/3] items-center justify-center p-4 text-center sm:p-6 w-full max-w-[min(100%,280px)] sm:max-w-md mx-auto lg:mx-0 lg:max-w-none`}
             >
               <div className="flex flex-col items-center gap-3 text-gray-400">
                 <ImageIcon className="w-12 h-12" aria-hidden />

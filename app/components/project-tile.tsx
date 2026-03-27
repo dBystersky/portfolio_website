@@ -17,12 +17,14 @@ export function ProjectTile({ project, compact }: Props) {
   return (
     <article
       className={`${cardClass} overflow-hidden flex flex-col h-full ${
-        isCompact ? "hover:shadow-md" : "hover:shadow-xl"
+        isCompact
+          ? "hover:shadow-md w-full max-w-[min(100%,330px)] sm:max-w-[min(100%,360px)] md:max-w-none"
+          : "hover:shadow-xl"
       } transition-shadow`}
     >
       <div
         className={`relative bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center border-b border-gray-200 ${
-          isCompact ? "aspect-[16/10]" : "aspect-video"
+          isCompact ? "aspect-[5/3] md:aspect-[16/10]" : "aspect-video"
         }`}
       >
         {project.imageSrc ? (
@@ -30,12 +32,19 @@ export function ProjectTile({ project, compact }: Props) {
             src={project.imageSrc}
             alt={project.imageAlt ?? `${project.title} project image`}
             fill
-            sizes={isCompact ? "(max-width: 1024px) 50vw, 33vw" : "(max-width: 1024px) 100vw, 33vw"}
+            sizes={
+              isCompact
+                ? "(max-width: 767px) 330px, (max-width: 1023px) 33vw, 33vw"
+                : "(max-width: 1024px) 100vw, 33vw"
+            }
             className="object-cover"
           />
         ) : (
           <div className="flex flex-col items-center gap-2 text-gray-400">
-            <ImageIcon className={isCompact ? "w-8 h-8" : "w-10 h-10"} aria-hidden />
+            <ImageIcon
+              className={isCompact ? "w-7 h-7 max-md:w-6 max-md:h-6 md:w-8 md:h-8" : "w-10 h-10"}
+              aria-hidden
+            />
             <span className="text-xs">Project image</span>
           </div>
         )}
@@ -45,17 +54,21 @@ export function ProjectTile({ project, compact }: Props) {
           </span>
         ) : null}
       </div>
-      <div className={`flex flex-col flex-1 ${isCompact ? "p-4" : "p-6"}`}>
+      <div
+        className={`flex flex-col flex-1 ${isCompact ? "p-3.5 max-md:p-3 sm:p-4" : "p-6"}`}
+      >
         <h2
           className={`font-semibold text-gray-900 mb-2 ${
-            isCompact ? "text-base" : "text-xl"
+            isCompact ? "text-sm max-md:text-sm sm:text-base" : "text-xl"
           }`}
         >
           {project.title}
         </h2>
         <p
           className={`text-gray-700 leading-relaxed flex-1 mb-3 ${
-            isCompact ? "text-xs line-clamp-3" : "text-sm"
+            isCompact
+              ? "text-xs line-clamp-3 max-md:line-clamp-3 sm:text-xs"
+              : "text-sm"
           }`}
         >
           {project.description}

@@ -80,7 +80,8 @@ export default function Home() {
                 <ArrowRight className="w-4 h-4" aria-hidden />
               </Link>
             </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {/* Single column on small screens; 3 equal columns from md up (avoids 2+1 orphan gap) */}
+            <div className="grid grid-cols-1 gap-4 justify-items-center md:grid-cols-3 md:gap-6 md:justify-items-stretch">
               {showcaseProjects.map((project, i) => (
                 <ProjectTile key={`showcase-${project.title}-${i}`} project={project} compact />
               ))}

@@ -29,10 +29,10 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-2 lg:items-center mb-10">
+          <div className="grid gap-6 md:grid-cols-[0.8fr_1.2fr] md:items-center mb-10">
             {/* Hero image: put a file in public/ (e.g. public/hero.jpg) and use next/image here */}
             <div
-              className={`${cardClass} flex aspect-[4/3] items-center justify-center p-4 text-center sm:p-6 w-full max-w-[min(100%,280px)] sm:max-w-md mx-auto lg:mx-0 lg:max-w-none`}
+              className={`${cardClass} flex aspect-[4/5] items-center justify-center p-4 text-center sm:p-5 w-full max-w-[min(100%,240px)] sm:max-w-[280px] mx-auto md:mx-0 md:max-w-[320px]`}
             >
               <div className="flex flex-col items-center gap-3 text-gray-400">
                 <ImageIcon className="w-12 h-12" aria-hidden />

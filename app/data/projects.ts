@@ -28,7 +28,8 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     title: "Santorini Board Game Simulator",
-    description: "[Short description for this tile.]",
+    description:
+      "A desktop simulator of the board game Santorini, designed with object-oriented principles to model game state, rules, and turn flow. Built with Java for core logic and Java Swing for the user interface.",
     href: "#",
     tag: "Application",
     imageSrc: "/santorini.png",
